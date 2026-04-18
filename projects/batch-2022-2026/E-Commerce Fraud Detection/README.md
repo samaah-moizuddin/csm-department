@@ -82,7 +82,10 @@ python manage.py runserver
 Open your web browser and navigate to:
 `http://127.0.0.1:8000/`
 
-## 👥 Contributors
-
+## 👥 Team Members:
+- Samaah Moizuddin - 160922748034
+- Hiba Fatima - 160922748007
+- Faiza Tahreem - 160922748014
+- Mehak Jahan - 160922748013
 - **LIET CSM Students** - *Batch of 2022-2026*
 - **Major Project Review Submission**
