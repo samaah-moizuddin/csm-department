@@ -205,7 +205,7 @@
 
     {% if prediction %}
         {% if prediction.is_fraud %}
-        <div class="result-card result-fraud">
+        <div class="result-card result-fraud" id="prediction-result">
             <div class="result-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
             <h2 class="result-label">{{ prediction.label }}</h2>
             <div class="result-confidence">Confidence: {{ prediction.confidence }}%</div>
@@ -228,7 +228,7 @@
         </div>
         
         {% else %}
-        <div class="result-card result-safe">
+        <div class="result-card result-safe" id="prediction-result">
             <div class="result-icon"><i class="fa-solid fa-circle-check"></i></div>
             <h2 class="result-label">{{ prediction.label }}</h2>
             <div class="result-confidence">Confidence: {{ prediction.confidence }}%</div>
@@ -250,6 +250,17 @@
             {% endif %}
         </div>
         {% endif %}
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                setTimeout(function() {
+                    var el = document.getElementById('prediction-result');
+                    if(el) {
+                        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }, 100);
+            });
+        </script>
     {% endif %}
 
 </div>
